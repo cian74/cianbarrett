@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
+import "./App.css";
+import CatPics from "./CatPics";
+
+function Home() {
+  return (
+    <div className="centered">
+      <div className="content">
+        <h1>cian barrett</h1>
+        <div className="links">
+          <a href="https://github.com/cian74" target="_blank" rel="noopener noreferrer">github</a>
+          <a href="https://www.linkedin.com/in/cian-barrett-819862277/" target="_blank" rel="noopener noreferrer">linkedin</a>
+          <a href="mailto:cianbarrett3011@gmail.com" target="_blank" rel="noopener noreferrer">email</a>
+          <Link to="/cat-pics">cat pics</Link>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/cat-pics" element={<CatPics />} />
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
