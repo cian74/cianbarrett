@@ -11,7 +11,6 @@ function Home() {
           <a href="https://github.com/cian74" target="_blank" rel="noopener noreferrer">github</a>
           <a href="https://www.linkedin.com/in/cian-barrett-819862277/" target="_blank" rel="noopener noreferrer">linkedin</a>
           <a href="mailto:cianbarrett3011@gmail.com" target="_blank" rel="noopener noreferrer">email</a>
-          <Link to="/cat-pics">cat pics</Link>
         </div>
       </div>
     </div>
@@ -23,7 +22,6 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-          <Route path="/cat-pics" element={<CatPics />} />
           <Route path="/" element={<Home />} />
         </Routes>
       </div>
